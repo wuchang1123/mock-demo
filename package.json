@@ -3,14 +3,16 @@
   "version": "0.0.1",
   "description": "Mock server",
   "scripts": {
-    "mock": "./node_modules/json-server/bin/index.js ./mock/db.json --routes ./routes.json --watch",
-    "custom": "node ./index.js"
+    "mock": "./node_modules/json-server/bin/index.js ./mock/db.json --routes ./routes.json --watch --port 3001",
+    "custom": "node ./index.js",
+    "mockjs": "node ./mockjs.js"
   },
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.1"
   },
   "devDependencies": {
-    "json-server": "^0.12.0"
+    "json-server": "^0.12.0",
+    "mockjs": "^1.0.1-beta3"
   }
 }

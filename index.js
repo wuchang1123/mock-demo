@@ -32,9 +32,9 @@ router.render = (req, res) => {
 }
 
 // Use default router
-// server.use(router)
+server.use(router)
 // Mount the router on /api
-server.use('/api', router)
+// server.use('/api', router)
 server.listen(3000, () => {
 	console.log('JSON Server is running')
 })

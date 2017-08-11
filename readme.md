@@ -11,7 +11,8 @@ $ npm install -g json-server
 ```
 
 - 项目目录下建立数据库 db.json
-- 启动`$ json-server --watch db.json`
+- 启动  
+`$ json-server --watch db.json`
 
 ### 项目里使用
 ```bash
@@ -49,9 +50,9 @@ npm run mock
 - 表：数组格式，表名使用复述如posts、comments
 - 关系型数据：例如comments数据字段名使用postId进行关联
 
-	[http://localhost:3000/posts/1?_embed=comments](http://localhost:3000/posts/1?_embed=comments "示范") <br>
-	[http://localhost:3000/posts/2?_embed=comments](http://127.0.0.1:3000/posts/2?_embed=comments "示范") 
-	
+	[http://localhost:3000/posts/1?_embed=comments](http://localhost:3000/posts/1?_embed=comments "示范")   
+	[http://localhost:3000/posts/2?_embed=comments](http://127.0.0.1:3000/posts/2?_embed=comments "示范")
+
 ### REST API
 ```
 GET    /posts
@@ -69,8 +70,8 @@ JSONP、CORS、https
 - 过滤：指定条件，可以使用
 
 ### 如何随机数据
-- 使用js生成数据，替换上面使用的db.json，数据格式一致；
-- 因为是使用js生成的，所以可以与任何随机的开源库搭配使用；
+使用js生成数据，替换上面使用的db.json，数据格式一致；  
+因为是使用js生成的，所以可以与任何随机的开源库搭配使用；
 
 ```
 // index.js
@@ -113,8 +114,8 @@ server.use(jsonServer.rewriter({
 }))
 ```
 
-[http://localhost:3000/blog/posts](http://localhost:3000/blog/posts "示范") <br>
-[http://localhost:3000/blog/posts/1](http://localhost:3000/blog/posts/1 "示范") 
+[http://localhost:3000/blog/posts](http://localhost:3000/blog/posts "示范")   
+[http://localhost:3000/blog/posts/1](http://localhost:3000/blog/posts/1 "示范")
 
 把JSON Server挂在指定路径下，避免与现有项目路径冲突
 
@@ -134,9 +135,11 @@ router.render = (req, res) => {
 }
 ```
 
+### 搭配Mock.js
+
 ## 如何模拟 TCP
-- 俊杰、正凯采用触发、监听事件的方式，模拟实现下发；
-- 心愿礼物：模拟实现自动下发、请求后下发
+俊杰、正凯采用触发、监听事件的方式，模拟实现下发；  
+心愿礼物：模拟实现自动下发、请求后下发
 
 ## 推荐开源工具、库
 - JSON server
